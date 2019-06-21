@@ -1,0 +1,3 @@
+#устанавливаем node_modules в игнор
+node_modules/
+dist/
