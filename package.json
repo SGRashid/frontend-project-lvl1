@@ -13,5 +13,8 @@
     "@babel/core": "*",
     "@babel/node": "*",
     "@babel/preset-env": "*"
+  },
+"dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }
