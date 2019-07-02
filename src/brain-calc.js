@@ -24,7 +24,7 @@ const calc = (name) => {
 
 		console.log(`Question: ${number1} ${operation} ${number2}`);
 		let answer = readlineSync.question('Your answer: ');
-		if (answer != correctAnswer) {
+		if (answer !== correctAnswer) {
 			console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
 			console.log(`Let's try again, ${name}!`);
 			return false;
