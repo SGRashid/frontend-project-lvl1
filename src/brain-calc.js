@@ -2,8 +2,6 @@ import readlineSync from 'readline-sync';
 import rand from './rand';
 import hello from '.';
 
-
-
 const calc = () => {
   
   console.log('Welcome to the Brain Games!');

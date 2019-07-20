@@ -2,27 +2,25 @@ import readlineSync from 'readline-sync';
 import rand from './rand';
 import hello from '.';
 
-const progression = () => {
+//Проверка простое ли число. Будет нужно в prime
+
+const isPrime = (num) => {
+  for (let i = 2; i <= num / 2; i += 1){
+    if (num % i === 0) {return false}
+  }
+  return true;
+}
+
+
+const prime = () => {
   console.log('Welcome to the Brain Games!');
-  console.log('What number is missing in the progression?');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".\n');
   let name = hello();
 
   for (let i = 1; i < 4; i += 1){
-    let xNumber = rand(10);
-    let correctAnswer;
-    let a1 = rand(10);
-    let d = rand(10);
-    let question = [];
-    for(let n = 1; n <= 10; n += 1){
-      if (n === xNumber) {
-        question.push('... ');
-        correctAnswer = String(a1 + (n - 1)*d);
-      } else {
-      question.push(String(a1 + (n - 1)*d) + ' ');
-      }
-    }
-
-    console.log(`Question: ${question.join('')}`);
+    let randNum = rand(100);
+    let correctAnswer = isPrime(randNum) ? "yes" : "no";
+    console.log(`Question: ${randNum}`);
     //Cheat
     console.log(`Правильный ответ ${correctAnswer}`);
     let answer = readlineSync.question('You answer: ');
@@ -34,8 +32,7 @@ const progression = () => {
   }
 
   console.log(`Congratulations, ${name}!`);
-  
+   
 }
 
-export default progression;
-
+export default prime;
