@@ -2,13 +2,14 @@
 import readlineSync from 'readline-sync';
 import parity from '../parity';
 import calc from '../brain-calc';
+import gcd from '../brain-gcd';
 
 
 const selectGame = () => {
   console.log("Select game:");
   console.log('1 - brain-calc');
   console.log('2 - brain-parity');
-  //console.log("3 - brain-gcd");
+  console.log("3 - brain-gcd");
   //console.log("2 - brain-progression");
   //console.log("3 - brain-prime");
   console.log("");
@@ -20,10 +21,10 @@ const selectGame = () => {
     case '2':
     	parity();
     	break;
-    /*
     case '3':
       gcd();
       break;
+      /*
     case "2":
       progression();
       break;
