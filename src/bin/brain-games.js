@@ -1,11 +1,40 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import hello from '../index';
 import parity from '../parity';
 import calc from '../brain-calc';
 
-console.log('Welcome to the Brain Games!');
-let name = readlineSync.question('May I have your name? ');
-hello(name);
-//parity(name);
-calc(name);
+
+const selectGame = () => {
+  console.log("Select game:");
+  console.log('1 - brain-calc');
+  console.log('2 - brain-parity');
+  //console.log("3 - brain-gcd");
+  //console.log("2 - brain-progression");
+  //console.log("3 - brain-prime");
+  console.log("");
+  let select = readlineSync.question('>> ');
+  switch (select) {
+    case '1':
+    	calc();
+    	break;
+    case '2':
+    	parity();
+    	break;
+    /*
+    case '3':
+      gcd();
+      break;
+    case "2":
+      progression();
+      break;
+    case "3":
+      prime();
+      break;
+    */
+    default:
+    console.log("Incorrect number");
+    selectGame();
+  }
+}
+
+selectGame();

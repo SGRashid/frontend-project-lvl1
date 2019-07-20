@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const hello = (name) => {
+const hello = () => {
 
-console.log(`Hello, ${name}`);
-
+   let name = readlineSync.question('May I have your name? ');
+   console.log('Hello ' + name + '!\n');
+   return name;
 }
 
 export default hello;
