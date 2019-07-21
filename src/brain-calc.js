@@ -3,11 +3,9 @@ import rand from './rand';
 import hello from '.';
 
 const calc = () => {
-  
   console.log('Welcome to the Brain Games!');
   console.log('Find the greatest common divisor of given numbers.\n');
-  let name = hello();
-   
+  const name = hello();
   for (let i = 1; i < 4; i += 1) {
     const number1 = rand(100);
     const number2 = rand(100);
@@ -28,10 +26,11 @@ const calc = () => {
         operation = '*';
         correctAnswer = number1 * number2;
         break;
+      default:
+        break;
     }
-	
-	//Cheat
-	console.log(`Correct answer: ${correctAnswer}`);
+    // Cheat
+    console.log(`Correct answer: ${correctAnswer}`);
 
     console.log(`Question: ${number1} ${operation} ${number2}`);
     const answer = readlineSync.question('Your answer: ');

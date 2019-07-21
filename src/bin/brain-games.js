@@ -8,34 +8,34 @@ import prime from '../brain-prime';
 
 
 const selectGame = () => {
-  console.log("Select game:");
+  console.log('Select game:');
   console.log('1 - brain-calc');
   console.log('2 - brain-parity');
-  console.log("3 - brain-gcd");
-  console.log("4 - brain-progression");
-  console.log("5 - brain-prime");
-  console.log("");
-  let select = readlineSync.question('>> ');
+  console.log('3 - brain-gcd');
+  console.log('4 - brain-progression');
+  console.log('5 - brain-prime');
+  console.log('');
+  const select = readlineSync.question('>> ');
   switch (select) {
     case '1':
-    	calc();
-    	break;
+      calc();
+      break;
     case '2':
-    	parity();
-    	break;
+      parity();
+      break;
     case '3':
       gcd();
       break;
-    case "4":
+    case '4':
       progression();
       break;
-    case "5":
+    case '5':
       prime();
       break;
     default:
-    console.log("Incorrect number");
-    selectGame();
+      console.log('Incorrect number');
+      selectGame();
   }
-}
+};
 
 selectGame();
