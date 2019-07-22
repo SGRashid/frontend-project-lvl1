@@ -10,6 +10,7 @@ const bigestDivider = (num1, num2) => {
   for (i; i > 0; i -= 1) {
     if (num1 % i === 0 && num2 % i === 0) { return i; }
   }
+  return undefined;
 };
 
 const gcd = () => {
@@ -33,5 +34,6 @@ const gcd = () => {
   }
 
   console.log(`Congratulations, ${name}!`);
+  return undefined;
 };
 export default gcd;

@@ -44,6 +44,7 @@ const calc = () => {
   }
 
   console.log(`Congratulations, ${name}!`);
+  return undefined;
 };
 
 export default calc;
