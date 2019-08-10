@@ -22,7 +22,7 @@ const prime = () => {
     const correctAnswer = isPrime(randNum) ? 'yes' : 'no';
     console.log(`Question: ${randNum}`);
     // Cheat
-    console.log(`Правильный ответ ${correctAnswer}`);
+    // console.log(`Правильный ответ ${correctAnswer}`);
     const answer = readlineSync.question('You answer: ');
     if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}`);

@@ -30,7 +30,7 @@ const calc = () => {
         break;
     }
     // Cheat
-    console.log(`Correct answer: ${correctAnswer}`);
+    // console.log(`Correct answer: ${correctAnswer}`);
 
     console.log(`Question: ${number1} ${operation} ${number2}`);
     const answer = readlineSync.question('Your answer: ');

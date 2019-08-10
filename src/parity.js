@@ -4,7 +4,7 @@ import hello from '.';
 
 const parity = () => {
   console.log('Welcome to the Brain Games!');
-  console.log('Find the greatest common divisor of given numbers.\n');
+  console.log('Answer "yes" if number even otherwise answer "no".\n');
   const name = hello();
   for (let i = 1; i < 4; i += 1) {
     const number = rand(100);
